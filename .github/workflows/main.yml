@@ -1,0 +1,14 @@
+name: Test Self-Hosted Runner
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  test:
+    runs-on: self-hosted
+    steps:
+      - name: Print message
+        run: echo "✅ GRA self-hosted runner يعمل بنجاح!"
+      - name: Show server info
+        run: uname -a
